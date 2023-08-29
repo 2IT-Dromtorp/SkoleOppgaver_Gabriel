@@ -8,7 +8,7 @@ function App() {
 
   let isLoggedIn;
   let content = <h1> Overskrift </h1>;
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   if (isLoggedIn) {
     content = <MyButton />;
