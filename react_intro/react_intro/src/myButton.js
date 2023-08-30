@@ -13,14 +13,16 @@ function Uselist() {
   ];
 
   const listItems = products.map(product =>
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? 'magenta' : 'darkgreen'
-    }}
-  >
+
+    
+
+    <li key={product.id} style={{ color: product.isFruit ? 'magenta' : 'darkgreen' }}>
+
+
     {product.title}
+
   </li>
+
   );
 
   return <ul>{listItems}</ul>
@@ -28,7 +30,6 @@ function Uselist() {
 }  
 
 export default function MyButton() {
-
   
     return (
       <div>
