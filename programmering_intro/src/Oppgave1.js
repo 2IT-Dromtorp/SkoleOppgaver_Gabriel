@@ -1,11 +1,15 @@
 
 /*navnet er A og det vil bli sent ned til <A />*/
 function A() {
+
+    
+
     return (
     <div>
         <h2> (Deloppgave A) </h2>
         <p>hva skriver du i javascript dersom du vil gi variabelen text verdien 8?</p>
         <p>hvilken datatype er dette?</p>
+        <p>Svaret er: let test = 8</p>
     </div>
     );
   }
@@ -17,6 +21,7 @@ function B() {
         <h2> (Deloppgave B) </h2>
         <p>Hva skriver du dersom du vil gi variabelen text verdien "textverdi"?</p>
         <p>Hvilken datatype er dette?</p>
+        <p>svaret er: let test = "textverdi"</p>
     </div>
     );
   }
@@ -26,6 +31,7 @@ function C() {
         <div>
         <h2> (Deloppgave C) </h2>
         <p>Hva skriver du dersom du vil regne ut 2 * 3 ig sette resultatet inn i variabelen produkt?</p>
+        <p>svaret er: let text = 2 * 3</p>
     </div>
     );
   }
@@ -34,7 +40,9 @@ function D() {
     return (
         <div>
         <h2> (Deloppgave D) </h2>
-        <p>Hva skriver du dersom du vil regne ut verdien av brøken 2/3 og sette resultatet inn i variabelen broej? (Det kan være lurt å unngå skandinaviske bokstaver som æ, ø, å i variabelnavn.)</p>
+        <p>Hva skriver du dersom du vil regne ut verdien av brøken 2/3 og sette resultatet inn i variabelen broej? 
+          (Det kan være lurt å unngå skandinaviske bokstaver som æ, ø, å i variabelnavn.)</p>
+        <p>svaret er: let broej = 2/3</p>
     </div>
     );
   }
