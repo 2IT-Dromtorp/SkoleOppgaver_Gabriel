@@ -1,9 +1,5 @@
-
 /*navnet er A og det vil bli sent ned til <A />*/
-function A() {
-
-    
-
+function A() {  
     return (
     <div>
         <h2> (Deloppgave A) </h2>
@@ -14,7 +10,7 @@ function A() {
     );
   }
 
-/*navnet er A og det vil bli sent ned til <A />*/
+/*navnet er B og det vil bli sent ned til <B />*/
 function B() {
     return (
         <div>
@@ -25,7 +21,7 @@ function B() {
     </div>
     );
   }
-/*navnet er A og det vil bli sent ned til <A />*/
+/*navnet er C og det vil bli sent ned til <C />*/
 function C() {
     return (
         <div>
@@ -35,7 +31,7 @@ function C() {
     </div>
     );
   }
-/*navnet er A og det vil bli sent ned til <A />*/
+/*navnet er D og det vil bli sent ned til <D />*/
 function D() {
     return (
         <div>
@@ -47,10 +43,25 @@ function D() {
     );
   }
 function E() {
+  // her er alle oppgavene fra A til D faktisk i kode og ikke i text.
+  let OppA = 8;
+  let OppB = 'textverdi';
+  let OppC = 2 * 3;
+  let OppD = 2/3;
+// her er consol logene til oppgavene.
+  console.log(OppA);
+  console.log(OppB);
+  console.log(OppC);
+  console.log(OppD);
+  //her er oppgavene ut på siden og (let) blir sent ut til nettsiden som text.
     return (
         <div>
         <h2>(Deloppgave E)</h2>
         <p>lag et program der du tester om alle kommandoene over fungerer ved å bruke console.log() til å skrive ut innholdet av variablene.</p>
+        <p>oppgave A: {OppA}</p>
+        <p>oppgave B: {OppB}</p>
+        <p>oppgave C: {OppC}</p>
+        <p>oppgave D: {OppD}</p>
         </div>
     )
 }
