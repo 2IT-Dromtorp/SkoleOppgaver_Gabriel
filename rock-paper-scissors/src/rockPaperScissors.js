@@ -4,7 +4,7 @@ function R(){
         <h1>Rock Paper Scissors</h1>
     );
 }
-export default function rockPaperScissors() {
+export default function RockPaperScissors() {
     return (
       <div>
         <h1>Welcome to Rock Paper Scissors</h1>

@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './RockPaperScissors.js';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Counter from './Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RockPaperScissors />
+    <Counter />
 );
 
 // If you want to start measuring performance in your app, pass a function
