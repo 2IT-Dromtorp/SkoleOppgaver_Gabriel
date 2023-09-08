@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    color: white;
+    background-color: black;
+}
+
+#uppre{
+
+    background-color:#00ff37;
+    color: #000000;
+    border:none; 
+    border-radius:100%; 
+    min-height:120px; 
+    min-width: 120px;
+}
+#midre{
+    background-color:#ff0000;
+    color: #000000;
+    border:none; 
+    border-radius:100%; 
+    min-height:120px; 
+    min-width: 120px;
+}
+#dowre{
+    background-color:#ff0000;
+    color: #000000;
+    border:none; 
+    border-radius:100%; 
+    min-height:120px; 
+    min-width: 120px;
+}

@@ -1,34 +1,27 @@
-function Up() {
-  return (
-    <button>I'm a up</button>
-  );
-}
-function Down() {
-  return (
-    <button>I'm a down</button>
-  );
-}
-function Middle() {
-  let m = 0 + i++
-  return (
-    <button>I'm a middle</button>
-  );
-}
-  export default function Counter() {
-    var count = 0;
-      var button = document.getElementById("myButton");
-      var countDisplay = document.getElementById("count");
-      button.addEventListener("click", function() {
-         count++;
-         countDisplay.innerHTML = count;
-      });
+import { useState } from "react";
+import './count.css';
+
+export default function Counter() {
+    let [letup, setLetup] = useState (0)
+    
+    let upPress =() => {
+      setLetup(letup +1);
+    };
+
+    let midPress =() => {
+      setLetup(letup == 0);
+    };
+
+    let downPress =() => {
+      setLetup(letup -1);
+    };
     return (
       <div>
         <h1>Welcome to my app</h1>
-        <p><Up /></p>
-        <p>{m}</p>
-        <p><Middle /></p>
-        <p><Down /></p>
+        <p>{<button onClick={upPress} id="uppre">I'm a up</button>}</p>
+        <p>{<button onClick={midPress} id="midre">I'm a middle</button>}</p>
+        <p>{<button onClick={downPress} id="dowre">I'm a down</button>}</p>
+        <p>{letup}</p>
       </div>
     );
   }
