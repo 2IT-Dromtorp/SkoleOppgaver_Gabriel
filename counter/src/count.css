@@ -3,23 +3,42 @@ body{
     color: white;
     background-color: black;
 }
-
+div{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+}
 #uppre{
-
     background-color:#00ff37;
     color: #000000;
     border:none; 
     border-radius:100%; 
     min-height:120px; 
     min-width: 120px;
+    padding: auto;
+    margin: auto;
+    font-size: xx-large;
+}
+#uppre:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 #midre{
-    background-color:#ff0000;
+    background-color:#ffffff;
     color: #000000;
     border:none; 
     border-radius:100%; 
     min-height:120px; 
     min-width: 120px;
+    font-size: xx-large;
+}
+#midre:active {
+    background-color: #919191;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 #dowre{
     background-color:#ff0000;
@@ -28,4 +47,10 @@ body{
     border-radius:100%; 
     min-height:120px; 
     min-width: 120px;
+    font-size: xx-large;
+}
+#dowre:active {
+    background-color: #8e3e3e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
