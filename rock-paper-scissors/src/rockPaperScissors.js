@@ -1,27 +1,31 @@
 import React, { useState } from 'react';
+
 //copy code.
 function RockPaperScissors () {
-  const [userChoice, setUserChoice] = useState(null);
-  const [computerChoice, setComputerChoice] = useState(null);
-  const [result, setResult] = useState(null);
+//userchoise blir brukt til playgame.
+//setUserChoice blir brukt til 
+    const [userChoice, setUserChoice] = useState(null);
+//const computerChoice 
+    const [computerChoice, setComputerChoice] = useState(null);
+    const [result, setResult] = useState(null);
 //
-  const choices = ['rock', 'paper', 'scissors'];
-  function generateComputerChoice () {
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    return choices[randomIndex];
-  };
-  function determineWinner (user, computer) {
-    if (user === computer) return 'It\'s a tie!';
-    if (
-      (user === 'rock' && computer === 'scissors') ||
-      (user === 'paper' && computer === 'rock') ||
-      (user === 'scissors' && computer === 'paper')
+    const choices = ['rock', 'paper', 'scissors'];
+    function generateComputerChoice () {
+        const randomIndex = Math.floor(Math.random() * choices.length);
+        return choices[randomIndex];
+    };
+    function determineWinner (user, computer) {
+        if (user === computer) return 'It\'s a tie!';
+        if (
+        (user === 'rock' && computer === 'scissors') ||
+        (user === 'paper' && computer === 'rock') ||
+        (user === 'scissors' && computer === 'paper')
     ) {
-      return 'You win!';
+        return 'You win!';
     } else {
-      return 'Computer wins!';
+        return 'Computer wins!';
     }
-  };
+    };
   function playGame (userChoice) {
     const computerChoice = generateComputerChoice();
     const result = determineWinner(userChoice, computerChoice);

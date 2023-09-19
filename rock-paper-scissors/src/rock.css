@@ -1,0 +1,27 @@
+div {
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 24px;
+    color: #333;
+}  
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}  
+button:hover {
+    background-color: #2980b9;
+}
+p{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+  

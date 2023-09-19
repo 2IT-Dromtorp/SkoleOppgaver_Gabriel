@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
+import './rock.css';
 import RockPaperScissors from './rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
 
