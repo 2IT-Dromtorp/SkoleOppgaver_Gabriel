@@ -8,7 +8,6 @@ function RockPaperScissors () {
 //const computerChoice 
     const [computerChoice, setComputerChoice] = useState(null);
     const [result, setResult] = useState(null);
-//
     const choices = ['rock', 'paper', 'scissors'];
     function generateComputerChoice () {
         const randomIndex = Math.floor(Math.random() * choices.length);
