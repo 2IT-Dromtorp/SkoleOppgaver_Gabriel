@@ -1,50 +1,62 @@
 import React, { useState } from 'react';
 
-//copy code.
-function RockPaperScissors () {
-//userchoise blir brukt til playgame.
-//setUserChoice blir brukt til 
-    const [userChoice, setUserChoice] = useState(null);
-//const computerChoice 
-    const [computerChoice, setComputerChoice] = useState(null);
-    const [result, setResult] = useState(null);
-    const choices = ['rock', 'paper', 'scissors'];
-    function generateComputerChoice () {
-        const randomIndex = Math.floor(Math.random() * choices.length);
-        return choices[randomIndex];
-    };
-    function determineWinner (user, computer) {
-        if (user === computer) return 'It\'s a tie!';
-        if (
-        (user === 'rock' && computer === 'scissors') ||
-        (user === 'paper' && computer === 'rock') ||
-        (user === 'scissors' && computer === 'paper')
-    ) {
-        return 'You win!';
-    } else {
-        return 'Computer wins!';
-    }
-    };
-  function playGame (userChoice) {
-    const computerChoice = generateComputerChoice();
-    const result = determineWinner(userChoice, computerChoice);
+// The main function that holds our React component
+function RockPaperScissors() {
+  // State variables
+  const [playerChoice, setPlayerChoice] = useState(null);
+  const [computerChoice, setComputerChoice] = useState(null);
+  const [result, setResult] = useState('');
 
-    setUserChoice(userChoice);
-    setComputerChoice(computerChoice);
-    setResult(result);
+  // Array containing choices
+  const choices = ['rock', 'paper', 'scissors'];
+
+  // Function to determine computer's choice
+  const getComputerChoice = () => {
+    const randomIndex = Math.floor(Math.random() * 3);
+    return choices[randomIndex];
   };
+
+  // Function to determine the winner
+  const determineWinner = (player, computer) => {
+    if (player === computer) return 'It\'s a tie!';
+    if ((player === 'rock' && computer === 'scissors') ||
+        (player === 'scissors' && computer === 'paper') ||
+        (player === 'paper' && computer === 'rock')) {
+      return 'You win!';
+    }
+    return 'You lose!';
+  };
+
+  // Function to handle player's choice
+  const handleChoice = (choice) => {
+    setPlayerChoice(choice);
+    const computer = getComputerChoice();
+    setComputerChoice(computer);
+    const gameResult = determineWinner(choice, computer);
+    setResult(gameResult);
+  };
+
   return (
     <div>
-      <h1>Rock, Paper or Scissors</h1>
+      <h1>Rock Paper Scissors</h1>
+
+      {/* Display buttons for the player to make a choice */}
       <div>
-        <button onClick={() => playGame('rock')}>Rock</button>
-        <button onClick={() => playGame('paper')}>Paper</button>
-        <button onClick={() => playGame('scissors')}>Scissors</button>
+        {choices.map((choice) => (
+          <button key={choice} onClick={() => handleChoice(choice)}>
+            {choice}
+          </button>
+        ))}
       </div>
-      <p>Your choice: {userChoice}</p>
-      <p>Computer's choice: {computerChoice}</p>
-      <p>{result}</p>
+
+      {/* Display the player's and computer's choices */}
+      {playerChoice && <p>Your choice: {playerChoice}</p>}
+      {computerChoice && <p>Computer's choice: {computerChoice}</p>}
+
+      {/* Display the result */}
+      {result && <p>{result}</p>}
     </div>
   );
-};
+}
+
 export default RockPaperScissors;
