@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+div{
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+p{
+    text-align: center;
+    border: solid black;
+}
+button{
+    align-self: center;
+    width: fit-content;
+    border: solid black;
+    background-color: white;
+
+}
+button:hover{
+    background-color: wheat;
+}
