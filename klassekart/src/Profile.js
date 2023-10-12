@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import json from './profiles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Profile() {
 
@@ -31,6 +31,13 @@ export default function Profile() {
         }
     })
 
+    useEffect(() => {
+        const matcbedItem = json.elever.find(item => item.navn.toLowerCase() === profileParams.profile.toLowerCase ());
+        if (matcbedItem) {
+            setprofile(matcbedItem)
+        }
+    }, [])
+
     return (
         <>
         <div className='profile-container'>
@@ -38,7 +45,12 @@ export default function Profile() {
             <div className='profile-box'>
 
                 <h1> Dette er profilen til {profileParams.profile} </h1>
-                <p>name: {}</p>
+                <p>name: {profile.navn}</p>
+                <p>name: {profile.FullName}</p>
+                <p>name: {profile.alder}</p>
+                <p>name: {profile.email}</p>
+                <p>name: {profile.Tlf}</p>
+                <p>name: {profile.image}</p>
 
 
                 <button onClick={() => navigate(-1)} className='backbuttonlols'> Tilbake til hovedmeny </button>
