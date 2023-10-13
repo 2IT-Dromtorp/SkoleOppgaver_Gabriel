@@ -5,8 +5,8 @@ let json = {
             "FullName" : "Andreas Hurlen Kristiansen",
             "alder" : "17",
             "email" : "andreashkr@viken.no",
-            "Tlf" : 90918378,
-            "image": "images/profile-image.jpg"
+            "Tlf" : 999,
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Ahmad",
@@ -14,7 +14,7 @@ let json = {
             "alder" : "17",
             "email" : "ahmadza@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Philip",
@@ -22,7 +22,7 @@ let json = {
             "alder" : "17",
             "email" : "philipbey@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Gabriel",
@@ -30,7 +30,7 @@ let json = {
             "alder" : "23",
             "email" : "gabrielu@viken.no",
             "Tlf" : 95006508,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Theodor",
@@ -38,7 +38,7 @@ let json = {
             "alder" : "17",
             "email" : "theodorju@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Mattis",
@@ -46,7 +46,7 @@ let json = {
             "alder" : "17",
             "email" : "mattismol@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Alva",
@@ -54,7 +54,7 @@ let json = {
             "alder" : "17",
             "email" : "alvaov@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Silas",
@@ -62,7 +62,7 @@ let json = {
             "alder" : "17",
             "email" : "silass@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Axel",
@@ -70,7 +70,7 @@ let json = {
             "alder" : "17",
             "email" : "axelsan@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Vetle",
@@ -78,7 +78,7 @@ let json = {
             "alder" : "17",
             "email" : "vetlefon@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Kristoffer",
@@ -86,7 +86,7 @@ let json = {
             "alder" : "17",
             "email" : "kristofbek@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Johannes",
@@ -94,7 +94,7 @@ let json = {
             "alder" : "17",
             "email" : "johanneeve@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Elias",
@@ -102,7 +102,7 @@ let json = {
             "alder" : "17",
             "email" : "eliasgod@viken.no",
             "Tlf" : 999,
-            "image": "images/profile-image.jpg"
+            "image": "images/placeholder.png"
         },
         {
             "navn" : "Matheo",

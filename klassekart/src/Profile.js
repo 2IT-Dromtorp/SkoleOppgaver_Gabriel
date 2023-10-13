@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import json from './profiles';
 import { useEffect, useState } from 'react';
-
 export default function Profile() {
 
     const navigate = useNavigate();
@@ -43,18 +42,20 @@ export default function Profile() {
         <div className='profile-container'>
 
             <div className='profile-box'>
-
-                <h1> Dette er profilen til {profileParams.profile} </h1>
-                <p>name: {profile.navn}</p>
-                <p>name: {profile.FullName}</p>
-                <p>name: {profile.alder}</p>
-                <p>name: {profile.email}</p>
-                <p>name: {profile.Tlf}</p>
-                <p>name: {profile.image}</p>
-
-
-                <button onClick={() => navigate(-1)} className='backbuttonlols'> Tilbake til hovedmeny </button>
-
+                <div>
+                    <img src={profile.image} className='profile-image'/>
+                </div>
+                <div className='sis'>
+                    <h1>{profileParams.profile} </h1>
+                </div>
+                {/* <p>name: {profile.navn}</p> */}
+                <p>Name: {profile.FullName}</p>
+                <p>Alder: {profile.alder}</p>
+                <p>E-Mail: {profile.email}</p>
+                <p>Tlf: {profile.Tlf}</p>
+                <div className='sis'>
+                    <button onClick={() => navigate(-1)} className='backbuttonlols'> Tilbake til hovedmeny </button>
+                </div>
             </div>
         </div>
         </>

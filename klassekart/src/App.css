@@ -49,11 +49,12 @@
   padding: 2em;
   width: 2em;
   margin-top: 2em;
-  border: solid white 2px;
+  border: solid red 2px;
   font-size: 2em;
+  color: yellow;
 }
 .elev:hover{
-  background-color: #ffffff30;
+  background-color: #ffffff50;
 }
 
 .container {
@@ -67,7 +68,7 @@
   align-items: center;
   width: 50%;
   height: 100%;
-  background: green;
+  background: black;
 }
 
 .rightside {
@@ -76,10 +77,11 @@
   align-items: center;
   width: 50%;
   height: 100%;
-  background: blue;
+  background: black;
 }
 
 .profile-container {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,21 +92,41 @@
 
 .profile-box {
   border: solid red 2px;
-  color: white;
+  color: yellow;
   background-color: black;
   background: black;
-  width: 99%;
-  height: 99%;
-  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+p{
+  border: solid red 2px;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.profile-image{
+  border: red 2px solid;
+  width: 350px;
+  max-width: 350px;
+  height: 350px;
+  max-height: 350px;
 }
 .backbuttonlols{
   border: transparent;
   background-color: red;
-  color: white;
+  color: yellow;
   padding: 10px;
   font-size: large;
 }
 .backbuttonlols:hover{
   background-color: gold;
   color: red;
+}
+
+.sis{
+  text-align: center;
 }
