@@ -47,11 +47,14 @@
   justify-content: center;
   align-items: center;
   padding: 2em;
+  margin: 1px;
   width: 2em;
   margin-top: 2em;
-  border: solid red 2px;
+  background-color: #055565;
+  border: solid #033343 1px;
+  box-shadow: 0px 0px 1000px 20px #044454;
   font-size: 2em;
-  color: yellow;
+  color: white;
 }
 .elev:hover{
   background-color: #ffffff50;
@@ -68,7 +71,7 @@
   align-items: center;
   width: 50%;
   height: 100%;
-  background: black;
+  background: linear-gradient(#040029, #07000e);
 }
 
 .rightside {
@@ -77,7 +80,7 @@
   align-items: center;
   width: 50%;
   height: 100%;
-  background: black;
+  background: linear-gradient(#040029, #07000e);
 }
 
 .profile-container {
@@ -87,20 +90,20 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background: linear-gradient(#040029, #07000e);
 }
 
 .profile-box {
-  border: solid red 2px;
-  color: yellow;
-  background-color: black;
-  background: black;
+  box-shadow: 0px 0px 1000px 20px #044454;
+  border: solid #033343 2px;
+  color: white;
+  background-color: #055565;
   width: auto;
   height: auto;
   padding: 5px;
 }
 p{
-  border: solid red 2px;
+  border: solid #033343 2px;
   border-top: transparent;
   border-right: transparent;
   border-left: transparent;
@@ -109,7 +112,7 @@ p{
   padding-bottom: 0px;
 }
 .profile-image{
-  border: red 2px solid;
+  border: #033343 2px solid;
   width: 350px;
   max-width: 350px;
   height: 350px;
@@ -117,14 +120,14 @@ p{
 }
 .backbuttonlols{
   border: transparent;
-  background-color: red;
-  color: yellow;
+  background-color: #044454;
+  color: white;
   padding: 10px;
   font-size: large;
 }
 .backbuttonlols:hover{
-  background-color: gold;
-  color: red;
+  background-color: #033343;
+  color: white;
 }
 
 .sis{
