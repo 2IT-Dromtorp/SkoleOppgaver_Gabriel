@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import json from './profiles';
 import { useEffect, useState } from 'react';
+
 export default function Profile() {
 
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function Profile() {
 
 
     json.elever.map((item, index) => {
-        if (item.navn.toLowerCase() == profileParams.profile.toLowerCase()) {
+        if (item.navn.toLowerCase() === profileParams.profile.toLowerCase()) {
             console.log("correct. do something")
             console.log(item)
 
@@ -42,16 +43,12 @@ export default function Profile() {
         <div className='profile-container'>
 
             <div className='profile-box'>
-                <div>
-                    <img src={profile.image} className='profile-image'/>
-                </div>
                 <div className='sis'>
                     <h1>{profileParams.profile} </h1>
                 </div>
-                {/* <p>name: {profile.navn}</p> */}
                 <p>Name: {profile.FullName}</p>
                 <p>Alder: {profile.alder}</p>
-                <p>E-Mail: {profile.email}</p>
+                <p>E-mail: {profile.email}</p>
                 <p>Tlf: {profile.Tlf}</p>
                 <div className='sis'>
                     <button onClick={() => navigate(-1)} className='backbuttonlols'> Tilbake til hovedmeny </button>

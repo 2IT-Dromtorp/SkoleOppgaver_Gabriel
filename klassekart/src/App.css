@@ -48,39 +48,33 @@
   align-items: center;
   padding: 2em;
   margin: 1px;
-  width: 2em;
+  width: 6em;
+  height: 6em;
   margin-top: 2em;
+  margin-left: 5px;
   background-color: #055565;
   border: solid #033343 1px;
-  box-shadow: 0px 0px 1000px 20px #044454;
+  box-shadow: 0px 0px 50px 1px #044454;
   font-size: 2em;
-  color: white;
+  color: #ffffff;
 }
 .elev:hover{
   background-color: #ffffff50;
+  box-shadow: 0px 0px 50px 1px #06809e;
 }
 
 .container {
   display: flex;
   height: 100vh;
+  background: linear-gradient(to bottom right, #040029, #150011, #00043b);
 }
 
-.leftside {
+.leftside, .rightside {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
-  background: linear-gradient(#040029, #07000e);
-}
-
-.rightside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(#040029, #07000e);
 }
 
 .profile-container {
@@ -90,11 +84,11 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(#040029, #07000e);
+  background: linear-gradient(to bottom right, #040029, #150011, #00043b);
 }
 
 .profile-box {
-  box-shadow: 0px 0px 1000px 20px #044454;
+  box-shadow: 0px 0px 50px 1px #044454;
   border: solid #033343 2px;
   color: white;
   background-color: #055565;
@@ -119,8 +113,10 @@ p{
   max-height: 350px;
 }
 .backbuttonlols{
-  border: transparent;
-  background-color: #044454;
+  border: solid #033343 2px;
+  border-top: transparent;
+  border-left: transparent;
+  background-color: #055565;
   color: white;
   padding: 10px;
   font-size: large;
@@ -128,6 +124,7 @@ p{
 .backbuttonlols:hover{
   background-color: #033343;
   color: white;
+  box-shadow: 1px 1px 5px 1px #000000;
 }
 
 .sis{
