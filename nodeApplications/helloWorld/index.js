@@ -13,25 +13,24 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
 
-  connection.query('SELECT * FROM elev', function (error, results, fields) {
-    if (error) throw error;
-    // connected!
-  });
-  
-
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
   }
- 
+
   console.log('connected as id ' + connection.threadId);
-})
+});
 
+connection.query('SELECT * FROM elev', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results);
+});
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/', (request, response) => {
+  response.send("HelloWorld")
 })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
