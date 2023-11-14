@@ -76,6 +76,14 @@ function App() {
           <p>Hunden din er {DyrAlderOppC} år gammel.</p>
         </div>{/*oppgave-box*/}
       </div>{/*row*/}
+      <div className='row'>
+        <div className='oppgave-box'>
+          <h2>Oppgave 2</h2>
+        </div>{/*oppgave-box*/}
+        <div className='oppgave-box'>
+          <h2>Oppgave 3</h2>
+        </div>{/*oppgave-box*/}
+      </div>{/*row*/}
     </>
   );
 }

@@ -29,7 +29,7 @@ let json = {
             "FullName" : "Gabriel Karisari Ueland",
             "alder" : "23" + " år",
             "email" : "gabrielu@viken.no",
-            "Tlf" : "+47 950 06 508",
+            "Tlf" : "+47 999 99 999",
             "image": "images/placeholder.png"
         },
         {
