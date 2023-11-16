@@ -3,12 +3,11 @@ body{
   color: white;
 }
 header{
-  display: flex;
   border-bottom: solid white 1px;
-  display: flex;            /* Enables flexbox */
-  justify-content: center;  /* Centers horizontally */
-  align-items: center;      /* Centers vertically */
-  height: 100px;            /* Set a fixed height for your header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 .header-h1{
   font-size: 200%;
@@ -18,7 +17,7 @@ header{
   align-items: center;
 }
 .logo{
-  width: 80px;             /* Fixed width of the logo */
+  width: 80px;
   height: 50px; 
 }
 #hundeAlder{
@@ -40,7 +39,6 @@ header{
   padding: 20px;
   display: flex;
   align-content: center;
-  /* border: solid white 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,23 +77,21 @@ header{
 }
 @media (max-width: 768px) {
   .header-h1 {
-    font-size: 150%; /* Smaller font size for mobile devices */
+    font-size: 150%;
   }
 
   .logo {
-    width: 60px; /* Smaller logo for mobile devices */
+    width: 60px;
     height: 40px;
   }
-
   .row, .oppgave-box {
-    width: 90%; /* Full width on mobile devices */
-    padding: 10px; /* Smaller padding for mobile */
+    width: 90%;
+    padding: 10px;
   }
-
   .oppgave-box {
     font-size: 100%;
-    height: 30rem; /* Auto height for flexibility */
+    height: 30rem;
     width: 90%;
-    padding: 8px 16px; /* Adjust padding for mobile devices */
+    padding: 8px 16px;
   }
 }
