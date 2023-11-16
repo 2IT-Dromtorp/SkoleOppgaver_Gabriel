@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import "./topphemmelig.json";
 import { useState } from 'react';
+import "./bokstaver.json" ;
+
 function App() {
+  
   //Oppgave (A-B)
   let personsNavn = "Petter";
   let personAlder = 43;
@@ -41,7 +45,13 @@ function App() {
   function AnimAge (event) {
     setDyrAlderOppC(event.target.value);
   };
-  
+
+// oppgave 2
+let innloggingsinsinformasjon = {
+  brukernavn: "rektor",
+  passord: "passord123"
+}  
+console.log(innloggingsinsinformasjon)
   return (
     <>
       <header>
@@ -56,12 +66,11 @@ function App() {
         <div className='oppgave-box'>
           <h2>Oppgave 1</h2>
           <h3>Oppgave (A-B)</h3>
+          <button onClick={checkHundeaar} id='hundeAlder'>{hundeaar}</button>
           <p>hei! {personsNavn}.</p>
           <p>Du er {personAlder} år gammel.</p>
           <p>Hunden din hetter {dyrNavn}.</p>
           <p>Hunden din er {DyrAlder} år gammel.</p>
-          <p></p>
-          <button onClick={checkHundeaar} id='hundeAlder'>{hundeaar}</button>
         </div>{/*oppgave-box*/}
         <div className='oppgave-box'>
           <h2>Oppgave 1</h2>
@@ -74,14 +83,6 @@ function App() {
           <p>Du er {personAlderOppC} år gammel.</p>
           <p>Hunden din hetter {dyrNavnOppC}.</p>
           <p>Hunden din er {DyrAlderOppC} år gammel.</p>
-        </div>{/*oppgave-box*/}
-      </div>{/*row*/}
-      <div className='row'>
-        <div className='oppgave-box'>
-          <h2>Oppgave 2</h2>
-        </div>{/*oppgave-box*/}
-        <div className='oppgave-box'>
-          <h2>Oppgave 3</h2>
         </div>{/*oppgave-box*/}
       </div>{/*row*/}
     </>

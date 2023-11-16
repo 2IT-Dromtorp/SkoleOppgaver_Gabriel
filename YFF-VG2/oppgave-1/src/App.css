@@ -2,14 +2,13 @@ body{
   background-color: black;
   color: white;
 }
-/* body, div, header, footer{
-  border: solid white 1px;
-  padding: 10px;
-  margin: 10px;
-} */
 header{
   display: flex;
   border-bottom: solid white 1px;
+  display: flex;            /* Enables flexbox */
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;      /* Centers vertically */
+  height: 100px;            /* Set a fixed height for your header */
 }
 .header-h1{
   font-size: 200%;
@@ -19,8 +18,8 @@ header{
   align-items: center;
 }
 .logo{
-  width: 10%;
-  padding: 1%;
+  width: 80px;             /* Fixed width of the logo */
+  height: 50px; 
 }
 #hundeAlder{
   width: 80px ;
@@ -77,4 +76,26 @@ header{
   width: fit-content;
   color: white;
   appearance: textfield;
+}
+@media (max-width: 768px) {
+  .header-h1 {
+    font-size: 150%; /* Smaller font size for mobile devices */
+  }
+
+  .logo {
+    width: 60px; /* Smaller logo for mobile devices */
+    height: 40px;
+  }
+
+  .row, .oppgave-box {
+    width: 90%; /* Full width on mobile devices */
+    padding: 10px; /* Smaller padding for mobile */
+  }
+
+  .oppgave-box {
+    font-size: 100%;
+    height: 30rem; /* Auto height for flexibility */
+    width: 90%;
+    padding: 8px 16px; /* Adjust padding for mobile devices */
+  }
 }
