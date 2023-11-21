@@ -1,0 +1,18 @@
+body, div, header, footer{
+    border: solid white 1px;
+    padding: 10px;
+    margin: 10px;
+}
+body{
+    margin: 0;
+    background-color: #101;
+}
+header{
+    display: flex;
+    opacity: 0.8;
+    background-color: #000;
+    transition: 0.5s;
+}
+header:hover{
+    opacity: 1;
+}

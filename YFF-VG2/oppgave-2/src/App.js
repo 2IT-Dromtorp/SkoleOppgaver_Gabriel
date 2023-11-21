@@ -1,20 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './home';
 
 function App() {
   return (
     <>
-      <header>
-        <div className="headerimage">
-         <img src={logo} alt="logo" />
-        </div>{/*headerimage*/}
-        <div className="headertext">
-          <h1>YFF Oppgave 2. Quiz</h1>
-        </div>{/*headertext*/}
-      </header>
-      <div>
-
-      </div>
+       <Routes>
+          <Route path="/" element={<Home />} />
+       </Routes>
     </>
   );
 }
