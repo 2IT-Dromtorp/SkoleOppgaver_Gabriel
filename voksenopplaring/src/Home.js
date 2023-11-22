@@ -5,19 +5,99 @@ import Course from "./course";
 import Course2 from "./course2";
 import Course3 from "./course3";
 import Course4 from "./course4";
-
+import './main.css';
 
 function Home() {// adds a home function.
     
 return(
     <>
-        <p>home</p>
-        <button>Signup</button>
-        <button>Profile</button>
-        <button>Course</button>
-        <button>Course2</button>
-        <button>Course3</button>
-        <button>Course4</button>
+        <header>
+            <div className="logoBox">
+                <img src="" alt="Logo"></img>
+
+            </div>{/* logo */}
+            <div className="headerText">
+                <h1>Viken kurs for våksene over 40 år</h1>
+            </div>{/* headerText */}
+            <div className="profileBox">
+                <img src="" alt="image"></img>
+            </div>{/* ProfileBOx */}
+        </header>
+        <div>
+            <div>
+                <div>
+                    <img src="" alt="image"></img>
+                </div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+
+            </div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+                    <div>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </footer>
     </>
 );
 }

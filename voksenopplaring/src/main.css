@@ -1,0 +1,35 @@
+body, div, header, footer{
+    border: solid white 1px;
+    margin: 10px;
+    padding: 10px;
+}
+body{
+    background-color: #111;
+    /* margin: 0px; */
+    color: white;
+}
+header{
+    background-color: #00000050;
+    display: flex;
+}
+.logoBox, .profileBox{
+    width: 10%;
+    padding-top: 10%;
+}
+.logo, .profileImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+.headerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.headerText h1{
+    font-size: 400%;
+}
