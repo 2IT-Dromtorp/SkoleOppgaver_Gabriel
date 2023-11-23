@@ -1,7 +1,10 @@
-body, div, header, footer{
-    border: solid white 1px;
+/* body, div, header, footer{
+    border: solid wheat 1px;
     margin: 10px;
     padding: 10px;
+} */
+div{
+    padding: 1rem;
 }
 body{
     background-color: #111;
@@ -12,17 +15,28 @@ header{
     background-color: #00000050;
     display: flex;
 }
-.logoBox, .profileBox{
+#clickProfile{
     width: 10%;
-    padding-top: 10%;
+    border: transparent;
+    background-color: transparent;
+    transition: 0.5s;
 }
-.logo, .profileImage{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
+/* #clickProfile:hover{
+    
+} */
+.logoBox, .clickProfile{
+    width: 10%;
+}
+#logosize{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+#logosize:hover{
+    opacity: 1;
 }
 .headerText{
     display: flex;
@@ -32,4 +46,58 @@ header{
 }
 .headerText h1{
     font-size: 400%;
+}
+.topImageBox{
+    background-color: #00000030;
+    width: auto;
+    height: 30rem;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.topTextBox, .row{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+}
+.topTextBox{
+    background-color: #00000030;
+    transition: 0.5s;
+}
+.topText{
+    margin:  0% 5%;
+    width: 30%;
+    border-left: solid white 1px;
+    padding-left: 1%;
+}
+.courseText{
+    margin:  0%;
+    border-left: solid white 1px;
+    padding-left: 1%;
+}
+.course{
+    background-color: #00000030;
+    margin:  1rem 5%;
+    width: 30%;
+    transition: 0.5s;
+}
+.courseImage{
+    margin: 10px;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+footer, .mediaBox{
+    background-color: #00000030;
+    display: flex;
+    transition: 0.5s;
+}
+.footBox{
+    width: 30%;
+}
+.SosalBox{
+    width: 100%;
+}
+footer:hover, .mediaBox:hover, .course:hover, .topTextBox:hover{
+    background-color: black;
 }
