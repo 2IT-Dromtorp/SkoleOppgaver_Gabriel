@@ -2,6 +2,7 @@
     border: solid wheat 1px;
     margin: 10px;
     padding: 10px;
+    transition: 1s;
 } */
 div{
     padding: 1rem;
@@ -21,9 +22,6 @@ header{
     background-color: transparent;
     transition: 0.5s;
 }
-/* #clickProfile:hover{
-    
-} */
 .logoBox, .clickProfile{
     width: 10%;
 }
@@ -53,6 +51,9 @@ header{
     height: 30rem;
     overflow: hidden;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 .topTextBox, .row{
     display: flex;
@@ -73,7 +74,7 @@ header{
 .courseText{
     margin:  0%;
     border-left: solid white 1px;
-    padding-left: 1%;
+    padding-left: 3%;
 }
 .course{
     background-color: #00000030;
@@ -83,8 +84,7 @@ header{
 }
 .courseImage{
     margin: 10px;
-    width: 100%;
-    padding-top: 100%;
+    width: auto;
     overflow: hidden;
 }
 footer, .mediaBox{
@@ -100,4 +100,30 @@ footer, .mediaBox{
 }
 footer:hover, .mediaBox:hover, .course:hover, .topTextBox:hover{
     background-color: black;
+}
+#courseButton{
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    border-right: solid white 1px;
+    border-bottom: solid white 1px;
+    transition: 0.1s;
+    opacity: 0.8;
+    width: 80%;
+    height: 5rem;
+    font-size: 1.5rem;  
+}
+#courseButton:hover{
+    opacity: 1;
+}
+.courseButton{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;   
+}
+#courseImageshow{
+    overflow: hidden;
+    max-width: fit-content;
+    width: 100%;
 }
