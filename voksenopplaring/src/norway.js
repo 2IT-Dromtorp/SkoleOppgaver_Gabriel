@@ -32,6 +32,48 @@ function Norway() {
                     </div>{/* topText */}
                 </div>{/* topTextBox */}
             </div>{/* topBox */}
+            <footer>
+            <div className="footBox">
+            <h3>text</h3>
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+            </div>{/* footBox */}
+            <div className="footBox">
+                <div className="foottext">
+                <h3>text</h3>
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+                </div>{/* foottext */}
+                <div className="mediaBox">
+                    <div className="SosalBox">
+
+                    </div>{/* SosalBox */}
+                    <div className="SosalBox">
+
+                    </div>{/* SosalBox */}
+                    <div className="SosalBox">
+
+                    </div>{/* SosalBox */}
+                </div>{/* mediaBox */}
+            </div>{/* footBox */}
+            <div className="footBox">
+            <h3>text</h3>
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+            </div>{/* footBox */}
+        </footer>
         </>
     );
 }

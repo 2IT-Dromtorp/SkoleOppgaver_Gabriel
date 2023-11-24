@@ -6,7 +6,7 @@ import Workout from './workout.js';
 import Homeknowlege from './homeknowlege.js';
 import Norway from './norway.js';
 import ComputerKnowledge from './computerKnowledge.js';
-
+import Signup from './Signupbutton.js';
 function App() {//adds an app function
   return (
     <Routes>
@@ -16,6 +16,7 @@ function App() {//adds an app function
       <Route path="/homeknowlege" element={<Homeknowlege />} />
       <Route path="/norway" element={<Norway />} />
       <Route path="/computerKnowledge" element={<ComputerKnowledge />} />
+      <Route path="/Signupbutton" element={<Signup />} />
     </Routes>
   );
 }
