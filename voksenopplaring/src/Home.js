@@ -2,13 +2,21 @@ import './main.css';
 import { useNavigate } from 'react-router-dom';
 import usericon from './user_icon.svg';
 import iconcolor from './favicon-vgs-color.svg';
-import norway from './Norwegian.png'
-import homeknowlege from './homeeducation.png'
-import computerKnowledge from './basic-computer-knowledge-course.png'
-import workout from './workout.png'
-import topImage from './topimage.png'
+import norway from './Norwegian.png';
+import homeknowlege from './homeeducation.png';
+import computerKnowledge from './basic-computer-knowledge-course.png';
+import workout from './workout.png';
+import topImage from './topimage.png';
+import React, { useState } from 'react';
+import Login from './Login';
 function Home() {// adds a home function.
+    const [isLoginOpen, setLoginOpen] = useState(false);
 
+    const toggleLogin = () => {
+      setLoginOpen(!isLoginOpen);
+    };
+  
+  
     const navigate = useNavigate();
 return(
     <>
@@ -23,8 +31,10 @@ return(
             <div className="headerText">
                 <h1>Viken kurs for voksene over 40 år</h1>
             </div>{/* headerText */}
-            <div onClick={() => navigate('/Login')} className='login' id='clickProfile'>
-                    <img src={usericon} alt="image" id='logosize'></img>
+            <div className='clickProfile'>
+                <div onClick={toggleLogin}>
+                <img src={usericon} alt="image" id='logosize'></img></div>
+                {isLoginOpen && <Login closeLogin={toggleLogin} />}
             </div>
         </header>
             <div className="topBox">
@@ -152,4 +162,4 @@ return(
     </>
 );
 }
-export default Home;//exports the home funtions to apps.js
+export default Home;

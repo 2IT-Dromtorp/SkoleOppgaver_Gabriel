@@ -33,7 +33,7 @@ function Signupbutton() {
                 <input type="password" className='password' placeholder="passord"/>
             </div>{/* passwordbox */}
             <div className='loginbuttonbox'>
-                <button onClick={() => navigate('/Signupbutton')} id='signupbutton'>Melde deg på</button>
+                <button onClick={() => navigate('/')} id='signupbutton'>Melde deg på</button>
             </div>{/* loginbuttonbox */}
         </div>{/* loginbox */}
         </>

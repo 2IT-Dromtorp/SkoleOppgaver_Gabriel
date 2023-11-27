@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home.js'
-import Login from './login.js';
+// import Login from './login.js';
 import Workout from './workout.js';
 import Homeknowlege from './homeknowlege.js';
 import Norway from './norway.js';
@@ -11,7 +11,7 @@ function App() {//adds an app function
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      {/* <Route path="/login" element={<Login />} /> */}
       <Route path="/workout" element={<Workout />} />
       <Route path="/homeknowlege" element={<Homeknowlege />} />
       <Route path="/norway" element={<Norway />} />
