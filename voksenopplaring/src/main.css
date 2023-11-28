@@ -128,9 +128,9 @@ footer:hover, .mediaBox:hover, .course:hover, .topTextBox:hover{
     width: 100%;
 }
 .loginbox{
-    height: 40rem;
-    margin: 2% 35% 2% 35%;
-    background-color: black;
+    height: auto;
+    /* margin: 2% 35% 2% 35%; */
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,12 +164,42 @@ footer:hover, .mediaBox:hover, .course:hover, .topTextBox:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .login-content {
+.login-content {
     background: #111;
+    /* margin: 100rem; */
     width: 30%;
-    height: 70%;
+    height: auto;
     border-radius: 5px;
-  }
-  
+}
+#inputCSS{
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    border-bottom: solid white 1px;
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #333;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #222;
+    border-radius: 6px;
+    border: 3px solid #333;
+}
+.x-Buttondiv{
+    text-align: end;
+}
+#x-button{
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    opacity: 0.8;
+    font-size: xx-large;
+}
+#x-button:hover{
+    opacity: 1;
+}

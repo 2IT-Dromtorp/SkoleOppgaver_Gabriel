@@ -9,13 +9,35 @@ import workout from './workout.png';
 import topImage from './topimage.png';
 import React, { useState } from 'react';
 import Login from './Login';
-function Home() {// adds a home function.
+function Home() {
+    //login pup-up
     const [isLoginOpen, setLoginOpen] = useState(false);
 
     const toggleLogin = () => {
       setLoginOpen(!isLoginOpen);
+    };//end of login pup-up
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    // Event handler function
+    const handleLogin = () => {
+        setIsLoggedIn(true);
     };
-  
+
+    let loginbuttonDiv;
+
+    if (isLoggedIn) {
+        loginbuttonDiv = <p>Welcome back!</p>;
+    } else {    
+        loginbuttonDiv = (
+        <div>
+            <p>Please sign in.</p>
+            {/* Button to trigger the login */}
+            <button onClick={handleLogin}>Log In</button>
+        </div>
+        );
+    }
+    
   
     const navigate = useNavigate();
 return(
@@ -43,7 +65,8 @@ return(
                 </div>{/* topImageBox */}
                 <div className="topTextBox">
                     <div className="topText">
-                        <h2>Lorem, ipsum.</h2>
+                        {/* <h2>{loggingOnOrOff}.</h2> */}
+                        <h2>{loginbuttonDiv}</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
                     </div>{/* topText */}
                     <div className="topText">
