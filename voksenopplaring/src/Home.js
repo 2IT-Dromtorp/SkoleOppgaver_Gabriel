@@ -1,4 +1,5 @@
 import './main.css';
+import React, { useState, useContext } from 'react'; // Import useContext here
 import { useNavigate } from 'react-router-dom';
 import usericon from './user_icon.svg';
 import iconcolor from './favicon-vgs-color.svg';
@@ -7,14 +8,27 @@ import homeknowlege from './homeeducation.png';
 import computerKnowledge from './basic-computer-knowledge-course.png';
 import workout from './workout.png';
 import topImage from './topimage.png';
-import React, { useState } from 'react';
 import Login from './Login';
-function Home() {
-    //login pup-up
-    const [isLoginOpen, setLoginOpen] = useState(false);
+import Course from "./course";
+import { AuthContext } from './AuthContext';
+import Puplog from "./pupLog"
 
-    const toggleLogin = () => {
-      setLoginOpen(!isLoginOpen);
+function Home() {
+    const { isAuthenticated } = useContext(AuthContext);
+
+    //Puplog
+    const [isPuplogOpen, setPuplogOpen] = useState(false);
+
+    const togglePuplog = () => {
+      setPuplogOpen(!isPuplogOpen);
+    };//end of Puplog
+
+    
+    //login pup-up
+    const [isCourseOpen, setCourseOpen] = useState(false);
+
+    const toggleCourse = () => {
+      setCourseOpen(!isCourseOpen);
     };//end of login pup-up
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,48 +51,43 @@ function Home() {
         </div>
         );
     }
-    
-  
     const navigate = useNavigate();
 return(
     <>
-    {/* <div className='safekeepin'>
-        
-    <div onClick={() => navigate('/login')} className='login' >login</div>
-    </div> */}
         <header>
            <div onClick={() => navigate('/')} className='login' id='clickProfile'>
-                    <img src={iconcolor} alt="image" id='logosize'></img>
+                    <img src={iconcolor} alt="image" id='logosize2'></img>
             </div>
             <div className="headerText">
                 <h1>Viken kurs for voksene over 40 år</h1>
             </div>{/* headerText */}
-            <div className='clickProfile'>
-                <div onClick={toggleLogin}>
-                <img src={usericon} alt="image" id='logosize'></img></div>
-                {isLoginOpen && <Login closeLogin={toggleLogin} />}
+            <div className='clickProfile'>  
+                <div onClick={togglePuplog}>
+                    <img src={usericon} alt="image" id='logosize'></img>
+                    {/* {isPuplogOpen && <Puplog closePuplog={togglePuplog} />} */}
+                </div>
+                    {isPuplogOpen && <Puplog closePuplog={togglePuplog} />}
             </div>
         </header>
             <div className="topBox">
-                <div className="topImageBox">
-                    <img src={topImage} alt="topImage"></img>
-                </div>{/* topImageBox */}
-                <div className="topTextBox">
-                    <div className="topText">
-                        {/* <h2>{loggingOnOrOff}.</h2> */}
-                        <h2>{loginbuttonDiv}</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
-                    </div>{/* topText */}
-                    <div className="topText">
-                        <h2>Lorem, ipsum.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
-                    </div>{/* topText */}
-                </div>{/* topTextBox */}
+                <div className='tiptop'>
+                    <div className="topImageBox">
+                        <img src={topImage} alt="topImage"></img>
+                    </div>{/* topImageBox */}
+                    <div className="topTextBox">
+                        <div className="topText">
+                            <h2>Lorem, ipsum.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
+                        </div>{/* topText */}
+                        <div className="topText">
+                            <h2>Lorem, ipsum.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
+                        </div>{/* topText */}
+                    </div>{/* topTextBox */}
+                </div>
             </div>{/* topBox */}
             <div className="row">
-                
                 <div className="course">
-                
                     <div className="courseImage">
                         <img src={computerKnowledge} alt="image" id='courseImageshow'></img>
                     </div>{/* courseImage */}
@@ -88,7 +97,8 @@ return(
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
                         </div>{/* courseText */}
                         <div className='courseButton'>
-                            <button onClick={() => navigate('/computerKnowledge')} id='courseButton' >klikk her for å bli med på kurset</button>
+                        <button onClick={toggleCourse} id='courseButton' disabled={!isAuthenticated}>klikk her for å bli med på kurset</button>
+                            {isCourseOpen && <Course closeCourse={toggleCourse} />}
                         </div>
                     </div>
                 </div>{/* course */}
@@ -102,7 +112,8 @@ return(
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
                         </div>{/* courseText */}
                         <div className='courseButton'>
-                            <button onClick={() => navigate('/norway')} id='courseButton' >klikk her for å bli med på kurset</button>
+                            <button onClick={toggleCourse} id='courseButton' disabled={!isAuthenticated}>klikk her for å bli med på kurset</button>
+                            {isCourseOpen && <Course closeCourse={toggleCourse} />}
                         </div>
                     </div>
                 </div>{/* course */}
@@ -120,7 +131,8 @@ return(
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
                         </div>{/* courseText */}
                         <div className='courseButton'>
-                            <button onClick={() => navigate('/homeknowlege')} id='courseButton' >klikk her for å bli med på kurset</button>
+                            <button onClick={toggleCourse} id='courseButton' disabled={!isAuthenticated}>klikk her for å bli med på kurset</button>
+                            {isCourseOpen && <Course closeCourse={toggleCourse} />}
                         </div>
                     </div>
                 </div>{/* course */}
@@ -134,7 +146,8 @@ return(
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit ea natus quibusdam qui ratione, iure minus in accusantium expedita, sunt beatae aliquam maxime? Ut eius eos, perferendis qui molestias vel quos sed maiores at unde ducimus reiciendis esse, harum ullam. Ratione, perferendis tenetur laborum omnis aut quibusdam laboriosam quas?</p>
                         </div>{/* courseText */}
                         <div className='courseButton'>
-                            <button onClick={() => navigate('/workout')} id='courseButton' >klikk her for å bli med på kurset</button>
+                            <button onClick={toggleCourse} id='courseButton' disabled={!isAuthenticated}>klikk her for å bli med på kurset</button>
+                            {isCourseOpen && <Course closeCourse={toggleCourse} />}
                         </div>
                     </div>
                 </div>{/* course */}
@@ -181,7 +194,6 @@ return(
                 </ul>
             </div>{/* footBox */}
         </footer>
-        
     </>
 );
 }

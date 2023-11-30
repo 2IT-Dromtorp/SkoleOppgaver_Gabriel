@@ -1,34 +1,16 @@
-function Login({ closeLogin }) {
-    return (
-        <>
-            <div className="login-popup">
-                <div className="login-content">
-                    <div className="x-Buttondiv">
-                        <button onClick={closeLogin} id="x-button">X</button>
-                    </div>
-                    <div className='loginbox'>
-                        <div className='loginboxtopname'>
-                            <h2>Login</h2>
-                        </div>{/* loginboxtopname */}
-                        <div className='emailbox'>
-                            <p>skriv in Emailen din her</p>
-                            <input type="E-mail" className='email' placeholder="Email" id="inputCSS"/>
-                        </div>{/* emailbox */}
-                        <div className='passwordbox'>
-                            <p>skriv in passord din her</p>
-                            <input type="password" className='password' placeholder="passord" id="inputCSS"/>
-                        </div>{/* passwordbox */}
-                        <div className='loginbuttonbox'>
-                            <button onClick={closeLogin} id="loginbutton">Login</button>
-                        </div>{/* loginbuttonbox */}
-                        <div className='loginbuttonbox'>
-                            <p>har du ikke konto. lag en her!</p>
-                            <button onClick={closeLogin} id="loginbutton">Melde deg på</button>
-                        </div>{/* loginbuttonbox */}
-                    </div>{/* loginbox */}
-                </div>
-            </div>
-        </>
-    );
+import React, { useContext } from 'react';
+import { AuthContext } from './AuthContext'; // adjust the path as needed
+
+function Login() {
+  const { setIsAuthenticated } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  return (
+    <button onClick={handleLogin}>Log In</button>
+  );
 }
+
 export default Login;
