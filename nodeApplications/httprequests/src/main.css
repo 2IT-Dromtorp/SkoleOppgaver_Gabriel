@@ -1,0 +1,70 @@
+body{
+    background-color: #111;
+    color: #fff;
+}
+.topBar{
+    display: flex;
+    padding: 10px;
+    box-shadow: 0rem 10rem 10rem 0rem black;
+}
+#buttonTopBar1, #buttonTopBar2, #buttonTopBar3, #buttonTopBar4{
+    background-color: transparent;
+    height: 10rem;
+    width: 100%;
+    font-size: 5rem;
+    border: transparent;
+    margin: 1rem;
+}
+.textBox{
+    display: flex;
+}
+.leftBox, .RightBox{
+    border-left: solid #fff;
+    margin: 5rem;
+    padding-left: 5rem;
+    width: 50%;
+    font-size:  5rem;
+}
+#buttonTopBar1, #buttonTopBar2, #buttonTopBar3, #buttonTopBar4 {
+    background-color: transparent;
+    border-left: 2px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+} 
+#buttonTopBar1::before,#buttonTopBar2::before,#buttonTopBar3::before ,#buttonTopBar4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to Right, #fff, transparent);
+    transition: left 0.4s;
+} 
+#buttonTopBar1:hover::before, #buttonTopBar2:hover::before, #buttonTopBar3:hover::before, #buttonTopBar4:hover::before {
+    left: 0;
+}
+#buttonTopBar1:hover, #buttonTopBar2:hover, #buttonTopBar3:hover, #buttonTopBar4:hover {
+    color: black;
+}
+#buttonTopBar1::before, #buttonTopBar2::before, #buttonTopBar3::before, #buttonTopBar4::before{
+    display: flex;
+    align-items: center;
+}
+#buttonTopBar1::before {
+    content: 'Select';
+}
+#buttonTopBar2::before {
+    content: 'Update';
+}
+#buttonTopBar3::before {
+    content: 'Insert';
+}
+#buttonTopBar4::before {
+    content: 'Delete';
+}
+#buttonTopBar1:active, #buttonTopBar2:active, #buttonTopBar3:active, #buttonTopBar4:active{
+    color: white;
+}
