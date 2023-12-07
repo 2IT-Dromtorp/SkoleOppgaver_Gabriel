@@ -1,29 +1,39 @@
 import './main.css';
-function Home () {
+import Select from './select';
+import Update from './update';
+import Insert from './insert';
+import Delete from './delete';
+import { useState } from 'react';
 
+export default function Home () {
+    const [content, setContent] = useState(<Select />);
+
+    function placeContentSelect() {
+      setContent(<Select />);
+    }
+
+    function placeContentUpdate() {
+      setContent(<Update />);
+    }
+  
+    function placeContentInsert() {
+     setContent(<Insert />);
+   }
+  
+   function placeContentDelete() {
+     setContent(<Delete />);
+   }
     return (
         <>
             <div className='topBar'>
-                {/* <button onClick={} id='' >Button</button> */}
-                <button id='buttonTopBar1' ></button>
-                <button id='buttonTopBar2' ></button>
-                <button id='buttonTopBar3' ></button>
-                <button id='buttonTopBar4' ></button>
+                <button id='buttonTopBar1' onClick={placeContentSelect}></button>
+                <button id='buttonTopBar2' onClick={placeContentUpdate}></button>
+                <button id='buttonTopBar3' onClick={placeContentInsert}></button>
+                <button id='buttonTopBar4' onClick={placeContentDelete}></button>
             </div>{/* topBar */}
             <div className='textBox'>
-                <div className='leftBox'>
-                    <ul>
-                        <li>Get - Request</li>
-                        <li>Put - Request</li>
-                        <li>Post - Request</li>
-                    </ul>
-                </div>{/* leftBox */}
-                <div className='RightBox'>
-                    <p>Delete</p>
-                    <p>(Frivillig)</p>
-                </div>{/* RightBox */}
+                {content}
             </div>{/* textBox */}
         </>
     );
 }
-export default Home;
