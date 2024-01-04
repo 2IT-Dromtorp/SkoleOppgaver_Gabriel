@@ -45,7 +45,7 @@ app.get("/updateuser/:newhobby/:id", (request, response) => {
     response.send(JSON.stringify(results));
   });
 
-  response.send('If This works, great!');
+  // response.send('If This works, great!'); is the culse of a server crash!
   
 })
 
