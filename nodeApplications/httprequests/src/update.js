@@ -7,11 +7,12 @@ export default function UpdateUserForm() {
         event.preventDefault();
         console.log('sybmitted');
         const updateElevDatarequest = () => {
-            azios
+            axios
                 .get('http:')
                 .then(response => {
                     setupdateElevData(response.date);
-                })
+                });
+            updateElevDatarequest
         }
     }
 
