@@ -19,8 +19,8 @@ body{
 .textBox{
     display: flex;
     justify-content: center;
-  align-items: center; 
-  font-size: 2rem;
+    align-items: center; 
+    font-size: 2rem;
 
 }
 .leftBox, .RightBox{
