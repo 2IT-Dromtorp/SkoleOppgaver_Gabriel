@@ -1,11 +1,20 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./login.css";
 import lake from "./LackImage.png";
 
 export default function Login() {
-        
+    const navigate = useNavigate();
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        console.log('Login button clicked');
+        if (username === 'gabriel' && password === '123') {
+            navigate('/home');
+        } else {
+            console.log('Incorrect username or password');
+        }
     };
 
     const backgroundImageStyle = {
@@ -18,17 +27,30 @@ export default function Login() {
 
     return (
         <>
-            {/* coment */}
             <div style={backgroundImageStyle} id="Background">
                 <div id="LoginBox">
                     <h2>Logg inn</h2>
                     <p>Brukernavn</p>
+                    <p>brukernavnet er gabriel</p>
                     <label htmlFor="username"></label>
-                    <input type="text" id="username" name="username"></input>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)} // Update username state
+                    />
                     
                     <p>Passord</p>
+                    <p>passordet er 123</p>
                     <label htmlFor="password"></label>
-                    <input type="password" id="password" name="password"></input><br/>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)} // Update password state
+                    /><br/>
                     <button onClick={handleLogin} id="buttonLogin">Logg inn</button>
                 </div>
             </div>

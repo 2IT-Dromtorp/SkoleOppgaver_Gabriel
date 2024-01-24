@@ -28,3 +28,22 @@
     color: #F3E4Cb;
     background-color: #00000000;
 }
+#username, #password {
+    color: #F3E4CB;
+    background-color: #333333;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#username:focus, #password:focus {
+    border-color: #F3E4CB;
+    outline: none;
+}
+
+#username:hover, #password:hover {
+    border-color: #F3E4CB;
+}
