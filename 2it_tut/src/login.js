@@ -31,10 +31,10 @@ export default function Login() {
                 <div id="LoginBox">
                     <h2>Logg inn</h2>
                     <p>Brukernavn</p>
-                    <p>brukernavnet er gabriel</p>
                     <label htmlFor="username"></label>
                     <input
                         type="text"
+                        placeholder='gabriel'
                         id="username"
                         name="username"
                         value={username}
@@ -42,10 +42,10 @@ export default function Login() {
                     />
                     
                     <p>Passord</p>
-                    <p>passordet er 123</p>
                     <label htmlFor="password"></label>
                     <input
                         type="password"
+                        placeholder='123'
                         id="password"
                         name="password"
                         value={password}
