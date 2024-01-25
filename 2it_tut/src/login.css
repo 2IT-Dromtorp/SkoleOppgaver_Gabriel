@@ -17,16 +17,25 @@
     text-align: center;
     padding: 2rem; /* Adjust padding to your liking */
     border-radius: 0% 5% 5% 5%;
-    /* box-shadow: 0px 0px 10px 10px #000000; */
-
+    box-shadow: 0px 0px 10px 1px #000000;
+    
     /* Media Query for screens with width less than 768px (adjust breakpoint as needed) */
     @media (max-width: 768px) {
         width: 20%; /* Set a percentage width for smaller screens */
     }
 }
 #buttonLogin{
-    color: #F3E4Cb;
-    background-color: #00000000;
+    color: #F3E4CB;
+    background-color: #333333;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#buttonLogin:hover{
+    background-color: #555555;
 }
 #username, #password {
     color: #F3E4CB;

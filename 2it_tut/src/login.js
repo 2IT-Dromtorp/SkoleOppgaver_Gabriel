@@ -34,7 +34,7 @@ export default function Login() {
                     <label htmlFor="username"></label>
                     <input
                         type="text"
-                        placeholder='gabriel'
+                        placeholder='Username: gabriel'
                         id="username"
                         name="username"
                         value={username}
@@ -45,7 +45,7 @@ export default function Login() {
                     <label htmlFor="password"></label>
                     <input
                         type="password"
-                        placeholder='123'
+                        placeholder='password:123'
                         id="password"
                         name="password"
                         value={password}
