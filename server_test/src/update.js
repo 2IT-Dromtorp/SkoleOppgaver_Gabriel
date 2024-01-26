@@ -20,7 +20,7 @@ export default function UpdateUserForm() {
         <>
         <form onSubmit={HandleSubmit}>
             <label>ny Hobby:</label>
-            <input type='text' placeholder='john'/>
+            <input type='text' placeholder='hobby'/>
             <label>ElevID:</label>
             <input type='number'/>
             <input type='submit' value={"Submit"}/>
