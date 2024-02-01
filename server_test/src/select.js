@@ -11,7 +11,7 @@ export default function Select() {
 
     const getelevsData = () => {
         axios
-            .get(build || "http://localhost:3000 ")
+            .get("build" || "http://localhost:3000 ")
             .then(response => {
                 setElevData(response.data);
             })
