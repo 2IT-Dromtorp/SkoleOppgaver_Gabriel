@@ -1,0 +1,26 @@
+footer{
+    color: white;
+}
+footer a{
+    color: white;
+}
+footer{
+    border-top: solid gray 1px;
+    background-color: #3F3F3F;
+    padding: 20px;
+    z-index: 2000;
+    position: relative; /* Add this line */
+}
+.main-footer-content{
+    display: flex;
+    padding: 20px;
+    margin: auto;
+}
+.footer-content{
+    flex: 1;
+    padding: 10px;
+    /* background-color: aqua; */
+    border-left:  solid white 1px;
+    height: auto;
+    box-shadow: white -20px 0px 20px -30px;
+}

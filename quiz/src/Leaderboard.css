@@ -1,0 +1,39 @@
+.leaderbord{
+    padding: 10px;
+    border: solid white 1px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+#controllbox{
+    /* background-color: black; */
+    /* padding: 10px; */
+    /* width: 100%; */
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+#insidecontrollbox{
+    display: flex;
+    flex-direction: column;
+    /* border: solid white; */
+}
+#SideLine{
+    width: 1px;
+    background-color: aliceblue;
+    height: auto;
+    align-items: center;
+    margin: 5px ;
+}
+#Line{
+    height: 1px;
+    background-color: aliceblue;
+    width: auto;
+    
+}
+.Rank, .Name, .Score{
+    /* width: 100%; */
+    font-size: 100px;
+    /* border: solid black; */
+
+}
